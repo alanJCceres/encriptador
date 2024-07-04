@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --fuente:"Inter Tight", sans-serif;
+}
+
+body{
+    background-color: #D8DFE8;
+    color: #0A3871; 
+    font-family: var(--fuente);
+    padding: 0;
+    margin: 0;
+}
+
+.contenido{
+    display: flex;
+    padding: 6% 15%;
+    justify-content: space-between;
+    gap:24px;
+    padding: 79px 200px;
+}
+.titulo_encriptador{
+    display: flex;
+    justify-content: center; /*justify-content y align-items centran el elemento de acuerdo al contenedor*/
+    align-items: center;
+}
+.contenedora1{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.texto_area1{
+    width: 1074px; /* Ancho del textarea */
+    height: 494px; /* Alto del textarea */
+    border: none; /* Borde del textarea */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #D8DFE8; /* Color de fondo */
+    color: #0A3871; /* Color de la letra */
+    font-size: 32px; /* Tamaño de la letra */
+    padding: 10px; /* Espacio interno */
+    box-sizing: border-box; /* Incluye el padding y borde en el tamaño total */
+    resize: none; /* Permite redimensionar el textarea, con both te deja redimensionar */
+    font-family: var(--fuente);
+}
+.texto_area1:focus {
+    outline: none; /* Elimina el contorno al enfocarse */
+}
+
+
+.contenedora_botones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:24px;
+}
+.boton_principal{
+    width: 328px; /* Cambia el tamaño del botón */
+    height: 67px; /* Cambia el tamaño del botón */
+    font-size: 16px; /* Cambia el tamaño de la letra */
+    background-color: #0A3871; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 24px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-family: var(--fuente);
+}
+.boton_secundario{
+    width: 328px; /* Cambia el tamaño del botón */
+    height: 67px; /* Cambia el tamaño del botón */
+    font-size: 16px; /* Cambia el tamaño de la letra */
+    background-color: #D8DFE8; /* Color de fondo */
+    color: #0A3871; /* Color del texto */
+    border: 1px solid #0A3871;
+    border-radius: 24px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-family: var(--fuente);
+}
+
+.contenedora2{
+    display: flex;
+    flex-direction: column; /*flex-direction y align-items combinados centra los elementos en una columna de acuerdo al contenedor*/
+    align-items: center;
+    width: 300px;
+    height: 650px;
+    background-color: white;
+    border-radius: 32px;
+    box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.5); /* SOMBREADO 1. desplazamiento horizontal, 2. desplaz vertical, 3. radio de desenfoque */
+    gap:10px;
+    padding: 0 25px;
+}
+
+.texto_area2{
+    width: 250px;
+    height: 500px;
+    border: none;
+    resize: none;
+    color: #495057; /* Color de la letra */
+    font-size: 24px; /* Tamaño de la letra */
+    border-radius: 32px;
+    padding: 15px; /* Espacio interno */
+    font-family: var(--fuente);
+}
+.texto_area2:focus {
+    outline: none; /* Elimina el contorno al enfocarse */
+    /*border-color: #45a049;*/ /* Color del borde al enfocarse */
+    /*background-color: #e8f5e9;*/ /* Color de fondo al enfocarse */
+}
+
+.boton_terciario{
+    width: 250px; /* Cambia el tamaño del botón */
+    height: 67px; /* Cambia el tamaño del botón */
+    font-size: 16px; /* Cambia el tamaño de la letra */
+    background-color: white; /* Color de fondo */
+    color: #0A3871; /* Color del texto */
+    border: 1px solid #0A3871;
+    border-radius: 24px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-family: var(--fuente);
+}
+
+.footer{
+    background-color: #0A3871;
+    padding: 25px; /*añadimos padding al elemento que define la distancia entre un elemento y sus bordes del contenedor*/
+    color: white;
+    text-align: center;
+    font-size: 24px; /*tamaño de letra*/
+    font-weight: 400;
+    font-family: var(--fuente);
+
+}

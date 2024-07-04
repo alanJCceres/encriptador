@@ -7,17 +7,26 @@
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
-    <main>
-        <h1>Encriptador de texto</h1>
-        <textarea id="texto_encriptar">Ingrese el texto aqui</textarea>
-        <button onclick="encriptar();">encriptar</button>
-        <button onclick="desencriptar();">desencriptar</button>
-        <div>
-            <textarea  id="texto_encriptado"></textarea>
-            <button onclick="copiarTexto();">copiar</button>
+    <h1 class="titulo_encriptador">Encriptador de texto</h1>
+    <main class="contenido">
+
+        <div class="contenedora1">
+            <textarea class="texto_area1" id="texto_encriptar">Ingrese el texto aqui</textarea>
+            <div class="contenedora_botones">
+            <button class="boton_principal" onclick="encriptar();">encriptar</button>
+            <button class="boton_secundario" onclick="desencriptar();">desencriptar</button>
+            </div>
         </div>
+
+        <div class="contenedora2">
+            <!--<p><strong>Ningun mensaje fue encontrado</strong> Ingresa el texto que deseas encriptar o desencriptar</p>-->
+            <textarea class="texto_area2"  id="texto_encriptado">
+            </textarea>  <!---->
+            <button class="boton_terciario" onclick="copiarTexto();">copiar</button>
+        </div>
+
     </main>
-    <footer>Desarrollado por Alan</footer>
+    <footer class="footer">Desarrollado por Alan</footer>
     <script src="./js/app.js"></script>
 </body>
 </html>
