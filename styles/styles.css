@@ -13,10 +13,9 @@ body{
 
 .contenido{
     display: flex;
-    padding: 6% 15%;
+    padding: 4% 15%;
     justify-content: space-between;
     gap:24px;
-    padding: 79px 200px;
 }
 .titulo_encriptador{
     display: flex;
@@ -26,23 +25,29 @@ body{
 .contenedora1{
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 35px;
 }
 .texto_area1{
-    width: 1074px; /* Ancho del textarea */
-    height: 494px; /* Alto del textarea */
+    width: 150%; /* Ancho del textarea */
+    height: 150%; /* Alto del textarea */
     border: none; /* Borde del textarea */
     border-radius: 5px; /* Bordes redondeados */
     background-color: #D8DFE8; /* Color de fondo */
     color: #0A3871; /* Color de la letra */
     font-size: 32px; /* Tamaño de la letra */
-    padding: 10px; /* Espacio interno */
+    padding: 3%; /* Espacio interno */
     box-sizing: border-box; /* Incluye el padding y borde en el tamaño total */
     resize: none; /* Permite redimensionar el textarea, con both te deja redimensionar */
     font-family: var(--fuente);
 }
 .texto_area1:focus {
     outline: none; /* Elimina el contorno al enfocarse */
+}
+
+.error{
+    color: red;
+    margin: 0;
+
 }
 
 
@@ -53,8 +58,8 @@ body{
     gap:24px;
 }
 .boton_principal{
-    width: 328px; /* Cambia el tamaño del botón */
-    height: 67px; /* Cambia el tamaño del botón */
+    width:328px ;
+    height: 67px;
     font-size: 16px; /* Cambia el tamaño de la letra */
     background-color: #0A3871; /* Color de fondo */
     color: white; /* Color del texto */
@@ -63,9 +68,13 @@ body{
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
     font-family: var(--fuente);
 }
+.boton_principal:hover{
+    background-color: #08274d;
+}
+
 .boton_secundario{
-    width: 328px; /* Cambia el tamaño del botón */
-    height: 67px; /* Cambia el tamaño del botón */
+    width:328px ;
+    height: 67px;
     font-size: 16px; /* Cambia el tamaño de la letra */
     background-color: #D8DFE8; /* Color de fondo */
     color: #0A3871; /* Color del texto */
@@ -74,18 +83,37 @@ body{
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
     font-family: var(--fuente);
 }
+.boton_secundario:hover{
+    background-color: #b6bfc9;
+}
 
 .contenedora2{
     display: flex;
     flex-direction: column; /*flex-direction y align-items combinados centra los elementos en una columna de acuerdo al contenedor*/
+    justify-content: center;
     align-items: center;
-    width: 300px;
+    width: 23%;
     height: 650px;
     background-color: white;
     border-radius: 32px;
     box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.5); /* SOMBREADO 1. desplazamiento horizontal, 2. desplaz vertical, 3. radio de desenfoque */
     gap:10px;
     padding: 0 25px;
+}
+
+.mensaje_inicial{
+    color: #495057;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center; /*alinea el texto centralmente*/
+}
+
+.resaltado{
+    color: #343A40;
+    font-size: 24px;
+    padding: 5px;
 }
 
 .texto_area2{
@@ -106,8 +134,8 @@ body{
 }
 
 .boton_terciario{
-    width: 250px; /* Cambia el tamaño del botón */
-    height: 67px; /* Cambia el tamaño del botón */
+    width: 100%; /* Cambia el tamaño del botón */
+    height: 10%; /* Cambia el tamaño del botón */
     font-size: 16px; /* Cambia el tamaño de la letra */
     background-color: white; /* Color de fondo */
     color: #0A3871; /* Color del texto */
@@ -115,6 +143,9 @@ body{
     border-radius: 24px; /* Bordes redondeados */
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
     font-family: var(--fuente);
+}
+.boton_terciario:hover{
+    background-color: rgb(209, 209, 209);
 }
 
 .footer{
