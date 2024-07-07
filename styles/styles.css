@@ -158,3 +158,36 @@ body{
     font-family: var(--fuente);
 
 }
+
+@media(max-width: 768px){
+    .contenido{
+        padding: 5% 1%;
+        flex-direction: column;
+        gap:50px;
+    }
+    .contenedora2{
+        width: auto;
+        height: 200px;
+        padding: 3%;
+    }
+    .boton_terciario{
+        height: 50%;
+    }
+    .texto_area1{
+        width: auto;
+        height: 300px;
+    }
+}
+
+@media(max-width: 375px){
+    .contenedora_botones{
+        flex-direction: column;
+    }
+    .contenido{
+        justify-content: center;
+        align-items: center;
+    }
+    .contenedora2{
+        width: 80%;
+    }
+}

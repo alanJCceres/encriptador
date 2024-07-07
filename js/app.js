@@ -46,7 +46,6 @@ function tieneAcentos(texto){
             res=true;
          }
       }
-      console.log(res);
     return res;
 }
 function mostrarMensajeError(){
