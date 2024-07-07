@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
 :root{
     --fuente:"Inter Tight", sans-serif;
+    --colorPrimario: #000000;
+    --colorSecundario:#00d6da;
+    --colorTerciario: rgb(0, 0, 0);
 }
 
 body{
-    background-color: #D8DFE8;
-    color: #0A3871; 
+    background-color: var(--colorPrimario);
+    color: var(--colorSecundario); 
     font-family: var(--fuente);
     padding: 0;
     margin: 0;
@@ -32,8 +35,8 @@ body{
     height: 150%; /* Alto del textarea */
     border: none; /* Borde del textarea */
     border-radius: 5px; /* Bordes redondeados */
-    background-color: #D8DFE8; /* Color de fondo */
-    color: #0A3871; /* Color de la letra */
+    background-color: var(--colorPrimario); /* Color de fondo */
+    color: var(--colorSecundario); /* Color de la letra */
     font-size: 2rem; /* Tamaño de la letra */
     padding: 3%; /* Espacio interno */
     box-sizing: border-box; /* Incluye el padding y borde en el tamaño total */
@@ -61,30 +64,33 @@ body{
     width:328px ;
     height: 67px;
     font-size: 1rem; /* Cambia el tamaño de la letra */
-    background-color: #0A3871; /* Color de fondo */
-    color: white; /* Color del texto */
+    background-color: var(--colorSecundario); /* Color de fondo */
+    color: var(--colorTerciario); /* Color del texto */
     border: none; /* Sin borde */
     border-radius: 24px; /* Bordes redondeados */
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
     font-family: var(--fuente);
+    font-size: 1.5rem;
+
 }
 .boton_principal:hover{
-    background-color: #08274d;
+    background-color: #005478;
 }
 
 .boton_secundario{
     width:328px ;
     height: 67px;
     font-size: 1rem; /* Cambia el tamaño de la letra */
-    background-color: #D8DFE8; /* Color de fondo */
-    color: #0A3871; /* Color del texto */
-    border: 1px solid #0A3871;
+    background-color: #000000; /* Color de fondo */
+    color: var(--colorSecundario);  /* Color del texto */
+    border: 1px solid var(--colorSecundario); 
     border-radius: 24px; /* Bordes redondeados */
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
     font-family: var(--fuente);
+    font-size: 1.5rem;
 }
 .boton_secundario:hover{
-    background-color: #b6bfc9;
+    background-color: #202020;
 }
 
 .contenedora2{
@@ -94,15 +100,16 @@ body{
     align-items: center;
     width: 23%;
     height: 650px;
-    background-color: white;
+    background-color: var(--colorPrimario);
     border-radius: 32px;
     box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.5); /* SOMBREADO 1. desplazamiento horizontal, 2. desplaz vertical, 3. radio de desenfoque */
     gap:10px;
     padding: 0 25px;
+    border: 3px solid var(--colorSecundario);
 }
 
 .mensaje_inicial{
-    color: #495057;
+    color: #ffffff;
     font-size: 1rem;
     display: flex;
     align-items: center;
@@ -111,17 +118,18 @@ body{
 }
 
 .resaltado{
-    color: #343A40;
+    color: var(--colorSecundario);
     font-size: 1.5rem;
     padding: 5px;
 }
 
 .texto_area2{
+    background-color: var(--colorPrimario);
     width: 90%;
     height: 80%;
     border: none; 
     resize: none;
-    color: #495057; /* Color de la letra */
+    color: white;/* Color de la letra */
     font-size: 1.5rem; /* Tamaño de la letra */
     border-radius: 32px;
     padding: 15px; /* Espacio interno */
@@ -137,21 +145,22 @@ body{
     width: 100%; /* Cambia el tamaño del botón */
     height: 10%; /* Cambia el tamaño del botón */
     font-size: 1rem; /* Cambia el tamaño de la letra */
-    background-color: white; /* Color de fondo */
-    color: #0A3871; /* Color del texto */
-    border: 1px solid #0A3871;
+    background-color: var(--colorTerciario); /* Color de fondo */
+    color: var(--colorSecundario); ; /* Color del texto */
+    border: 1px solid var(--colorSecundario); 
     border-radius: 24px; /* Bordes redondeados */
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
     font-family: var(--fuente);
+    font-size: 1.5rem;
 }
 .boton_terciario:hover{
-    background-color: rgb(209, 209, 209);
+    background-color: #202020;
 }
 
 .footer{
-    background-color: #0A3871;
+    background-color: var(--colorSecundario); ;
     padding: 25px; /*añadimos padding al elemento que define la distancia entre un elemento y sus bordes del contenedor*/
-    color: white;
+    color: var(--colorTerciario);
     text-align: center;
     font-size: 1.5rem; /*tamaño de letra*/
     font-weight: 400;
