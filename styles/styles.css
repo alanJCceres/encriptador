@@ -31,7 +31,7 @@ body{
     gap: 35px;
 }
 .texto_area1{
-    width: 150%; /* Ancho del textarea */
+    width: 130%; /* Ancho del textarea */
     height: 150%; /* Alto del textarea */
     border: none; /* Borde del textarea */
     border-radius: 5px; /* Bordes redondeados */
@@ -104,7 +104,7 @@ body{
     border-radius: 32px;
     box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.5); /* SOMBREADO 1. desplazamiento horizontal, 2. desplaz vertical, 3. radio de desenfoque */
     gap:10px;
-    padding: 0 25px;
+    padding: 1px 25px;
     border: 3px solid var(--colorSecundario);
 }
 
@@ -186,6 +186,12 @@ body{
         width: auto;
         height: 300px;
     }
+    .contenedora2{
+        height: 400px;
+    }
+    .texto_area2{
+        height: 200%;
+    }
 }
 
 @media(max-width: 375px){
@@ -198,6 +204,10 @@ body{
     }
     .contenedora2{
         width: 80%;
+        height: 400px;
+    }
+    .texto_area2{
+        height: 200%;
     }
     .texto_area1{
         width: 100%;

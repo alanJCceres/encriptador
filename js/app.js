@@ -28,7 +28,8 @@ function tieneMayusculas(texto){
     let res=false;
       for(let i=0;i<texto.length;i++){
          letra=texto[i];
-         if(letra == letra.toUpperCase() && letra!=" " && letra!=","){
+         console.log(letra+" "+letra.toUpperCase());
+         if(letra == letra.toUpperCase() && letra!=" " && letra != "  "&& letra!="," && letra!="." && letra!="/" && letra!="?"){
             res = true;
             break;
          }
@@ -57,8 +58,8 @@ function encriptar(){
     let letra="";
     let encriptado="";
     let indice;
-    /* console.log(tieneMayusculas(texto));
-    console.log(tieneAcentos(texto)); */
+    console.log(tieneMayusculas(texto));
+    console.log(tieneAcentos(texto));
     if(texto != ""){
         if(!tieneMayusculas(texto) && !tieneAcentos(texto)){
             for(let i=0;i<texto.length;i++){
