@@ -28,7 +28,7 @@ function tieneMayusculas(texto){
     let res=false;
       for(let i=0;i<texto.length;i++){
          letra=texto[i];
-         if(letra == letra.toUpperCase() && letra!=" "){
+         if(letra == letra.toUpperCase() && letra!=" " && letra!=","){
             res = true;
             break;
          }
