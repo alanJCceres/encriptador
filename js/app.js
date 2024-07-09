@@ -1,6 +1,7 @@
 const vocales = ['a','e','i','o','u'];
 const valores = ["ai","enter","imes","ober","ufat"];
-let contador=0;
+let contador2=0;
+let bandera=false;
 
 function desencriptar(){
     let texto = document.getElementById("texto_encriptar").value;
@@ -8,19 +9,26 @@ function desencriptar(){
     let desencriptado="";
     let indice;
     let saltos;
-    for(let i=0;i<texto.length;i++){
-        letra=texto[i];
-        if(existeEnVocales(letra)){
-            indice = buscarIndice(letra);
-            saltos = valores[indice].length-1;
-            i += saltos;
-            desencriptado += letra;
-        }else{
-            desencriptado += letra;
+    if(texto !=""){
+        for(let i=0;i<texto.length;i++){
+            letra=texto[i];
+            if(existeEnVocales(letra)){
+                indice = buscarIndice(letra);
+                saltos = valores[indice].length-1;
+                i += saltos;
+                desencriptado += letra;
+            }else{
+                desencriptado += letra;
+            }
         }
+        if(contador2!=0){
+            limpiar();
+        }
+        agregarElementos();
+        contador2++;
+        document.getElementById("texto_encriptado").value = desencriptado;
     }
-    limpiar();
-    document.getElementById("texto_encriptado").value = desencriptado;
+    
 
 }
 function tieneMayusculas(texto){
@@ -28,7 +36,6 @@ function tieneMayusculas(texto){
     let res=false;
       for(let i=0;i<texto.length;i++){
          letra=texto[i];
-         console.log(letra+" "+letra.toUpperCase());
          if(letra == letra.toUpperCase() && letra!=" " && letra != "  "&& letra!="," && letra!="." && letra!="/" && letra!="?"){
             res = true;
             break;
@@ -58,8 +65,6 @@ function encriptar(){
     let letra="";
     let encriptado="";
     let indice;
-    console.log(tieneMayusculas(texto));
-    console.log(tieneAcentos(texto));
     if(texto != ""){
         if(!tieneMayusculas(texto) && !tieneAcentos(texto)){
             for(let i=0;i<texto.length;i++){
@@ -71,12 +76,8 @@ function encriptar(){
                     encriptado += letra;
                 }
             }
-            if(contador==0){
-                agregarElementos();
-                contador++;
-            }
+            agregarElementos();
             document.getElementById("id_error").innerHTML='';
-            document.getElementById('boton_desencriptar').removeAttribute('disabled');
             limpiar();
             document.getElementById("texto_encriptado").value = encriptado;
         }else{
@@ -88,11 +89,14 @@ function encriptar(){
     
 }
 function agregarElementos(){
-    document.getElementById("mensaj_inicial").remove();
-    document.getElementById("contenedor2").innerHTML += `
+    if(bandera == false){
+        document.getElementById("mensaj_inicial").remove();
+        document.getElementById("contenedor2").innerHTML += `
         <textarea class="texto_area2"  id="texto_encriptado"></textarea>
         <button class="boton_terciario" onclick="copiarTexto();">copiar</button>
-    `;
+        `;
+        bandera=true;
+    }
 }
 
 function existeEnVocales(letra){
