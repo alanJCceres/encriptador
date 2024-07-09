@@ -28,12 +28,11 @@ function tieneMayusculas(texto){
     let res=false;
       for(let i=0;i<texto.length;i++){
          letra=texto[i];
-         if(letra === letra.toUpperCase()){
+         if(letra == letra.toUpperCase() && letra!=" "){
             res = true;
             break;
          }
       }
-      console.log(res);
       return res;
 }
 function tieneAcentos(texto){
@@ -58,27 +57,34 @@ function encriptar(){
     let letra="";
     let encriptado="";
     let indice;
-    if(!tieneMayusculas(texto) && !tieneAcentos(texto)){
-        for(let i=0;i<texto.length;i++){
-            letra = texto[i];
-            if(existeEnVocales(letra)){
-                indice = buscarIndice(letra);
-                encriptado += valores[indice];
-            }else{
-                encriptado += letra;
+    /* console.log(tieneMayusculas(texto));
+    console.log(tieneAcentos(texto)); */
+    if(texto != ""){
+        if(!tieneMayusculas(texto) && !tieneAcentos(texto)){
+            for(let i=0;i<texto.length;i++){
+                letra = texto[i];
+                if(existeEnVocales(letra)){
+                    indice = buscarIndice(letra);
+                    encriptado += valores[indice];
+                }else{
+                    encriptado += letra;
+                }
             }
+            if(contador==0){
+                agregarElementos();
+                contador++;
+            }
+            document.getElementById("id_error").innerHTML='';
+            document.getElementById('boton_desencriptar').removeAttribute('disabled');
+            limpiar();
+            document.getElementById("texto_encriptado").value = encriptado;
+        }else{
+            mostrarMensajeError();
         }
-        if(contador==0){
-            agregarElementos();
-            contador++;
-        }
-        document.getElementById("id_error").innerHTML='';
-        document.getElementById('boton_desencriptar').removeAttribute('disabled');
-        limpiar();
-        document.getElementById("texto_encriptado").value = encriptado;
     }else{
         mostrarMensajeError();
     }
+    
 }
 function agregarElementos(){
     document.getElementById("mensaj_inicial").remove();
